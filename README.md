@@ -174,3 +174,5 @@ You must have this stuff installed and updated for everything to run smoothly:
 3) Statmorph
 4) wget
 5) non-standard python stuff: astropy (vers), photutils, sklearn (vers), seaborn 
+
+To do: Use poetry to make this way better.
