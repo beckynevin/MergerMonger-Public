@@ -6,7 +6,7 @@ FILL THIS IN ABOUT ALL THE UTILITIES
 '''
 
 import matplotlib
-matplotlib.use('Qt5Agg')
+#matplotlib.use('Qt5Agg')
 import matplotlib.pyplot as plt
 plt.ioff()
 import numpy as np
@@ -14,10 +14,10 @@ import pandas as pd
 import seaborn as sns
 import os
 from os import path
-from util_LDA import run_LDA, run_RFR, run_RFC, cross_term
+from utils.util_LDA import run_LDA, run_RFR, run_RFC, cross_term
 import scipy
-from util_SDSS import download_sdss_ra_dec_table, download_galaxy
-from util_smelter import get_predictors
+from utils.util_SDSS import download_sdss_ra_dec_table, download_galaxy
+from utils.util_smelter import get_predictors
 import random
 from astropy.io import fits
 import os
