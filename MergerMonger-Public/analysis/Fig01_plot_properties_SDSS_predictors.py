@@ -21,7 +21,7 @@ print('loading up predictor value table........')
 max_n = 2e4
 
 contours = True
-fontsize = 15 # I'm making the labels pretty big for the paper
+fontsize = 20 # I'm making the labels pretty big for the paper
                                                               
 prefix = '/Users/rnevin/Documents/MergerMonger-Public/tables/simulation_classifications/'
 df2_OG = pd.io.parsers.read_csv(prefix+'../sdss_classifications/SDSS_predictors_all_flags_plus_segmap.txt', sep='\t')
@@ -114,12 +114,13 @@ if contours:
 
     ax2.set_ylim(xmin, xmax)
     ax2.set_xlim(ymax, -3)
-    ax2.set_xlabel(r'$M_{20}$', size = fontsize)
+    ax2.set_xlabel(r'$M_{20}$', size = fontsize, labelpad = -5)
     ax2.set_ylabel(r'$Gini$', size = fontsize)
-    ax2.tick_params(axis='both', which='major', labelsize = fontsize, bottom = True, left = True)
+    ax2.tick_params(axis='both', which='major', labelsize = fontsize - 5, bottom = True, left = True)
     ax2.set_aspect((ymax+3)/(xmax-xmin))
     #ax2.set_aspect((ymax-ymin)/(xmax-xmin))
-    ax2.annotate('Total # of galaxies = '+str(len(df2_OG))+'\n             # selected = '+str(len(df2_filtered)), xy=(0.29, 1.02), size = fontsize, xycoords='axes fraction')
+    ax2.annotate('Total # of galaxies = '+str(len(df2_OG))+'\n             # selected = '+str(len(df2_filtered)), 
+        xy=(0.05, 1.02), size = fontsize, xycoords='axes fraction')
     plt.savefig('figures/gini_m20_contours_overplot.png', dpi=1000)
 
     
@@ -147,9 +148,9 @@ if contours:
     ax2.set_ylim(xmin_c, xmax_c)
     ax2.set_xlim( ymin_c, ymax_c)
     #plt.colorbar(im2, fraction=0.046)
-    ax2.set_xlabel(r'Asymmetry (A)', size = fontsize)
+    ax2.set_xlabel(r'Asymmetry (A)', size = fontsize, labelpad = 0)
     ax2.set_ylabel(r'Concentration (C)', size = fontsize)
-    ax2.tick_params(axis='both', which='major', labelsize = fontsize, bottom = True, left = True)
+    ax2.tick_params(axis='both', which='major', labelsize = fontsize - 5, bottom = True, left = True)
     ax2.set_aspect((ymax_c-ymin_c)/(xmax_c-xmin_c))
     ax2.axvline(x=0.3, ls='--', color='black')
     plt.savefig('figures/C_A_contours_overplot.png', dpi=1000)
@@ -181,9 +182,9 @@ if contours:
     cb = plt.colorbar(im2, fraction=0.046, pad=0.1)
     cb.set_label(label=r'# of galaxies in bin', size = fontsize)
     cb.ax.tick_params(labelsize = fontsize)
-    ax2.set_xlabel(r'Shape Asymmetry ($A_S$)', size = fontsize)
+    ax2.set_xlabel(r'Shape Asymmetry ($A_S$)', size = fontsize,  labelpad = 0)
     ax2.set_ylabel(r'Sersic n', size = fontsize)
-    ax2.tick_params(axis='both', which='major', labelsize = fontsize, bottom = True, left = True)
+    ax2.tick_params(axis='both', which='major', labelsize = fontsize - 5, bottom = True, left = True)
     ax2.set_aspect((ymax_n-ymin_n)/(xmax_n-xmin_n))
     ax2.axvline(x=0.3, ls='--', color='black')
     plt.tight_layout()
