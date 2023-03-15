@@ -1,15 +1,15 @@
 <img src="images_for_github/goose_balloon.png" alt="goose" width="500">
 
 # A suite of tools for identifying different types of mergers in SDSS imaging
-Based on the imaging classification presented in <a href="https://arxiv.org/abs/1901.01975">Nevin+2019</a> and Nevin+2022.
+Based on the imaging classification presented in <a href="https://arxiv.org/abs/1901.01975">Nevin+2019</a> and <a href="https://arxiv.org/abs/2303.06249">Nevin+2023</a>.
 
 There are three main steps to this process: 
-1) Creating the classification from simulations of merging galaxies, 
-2) Measuring predictor values from images of galaxies, and 
-3) Classifying galaxies and obtaining probability values using the output from steps 1 and 2.
-4) Run the analysis from Nevin+2022
+1) Creating the classification from simulations of merging galaxies (I've done this for you here, although I provide some of the tools to do this for yourself), 
+2) Measuring predictor values from observed images of galaxies, 
+3) Classifying galaxies and obtaining probability values using the output from steps 1 and 2, and finally,
+4) Run the merger fraction analysis from Nevin+2023
 
-The simplest way to use this repo is to use the pre-prepared classifications and SDSS predictor values (see the tables/ folder) to re-run some of the analysis steps for the paper (#4). All of the analysis code lives in the code_analysis folder and the figures from the paper live in the figures_paper folder).
+The simplest way to use this repo is to use the pre-prepared classifications and SDSS predictor values (see the tables/ folder, which will point you to these data) to get classifications for individual or tables of SDSS galaxies. I've also set this repo up to use these tables to re-run some of the analysis steps for the paper (#4).
 
 However, the code for steps 1, 2, and 3 is also included here in case you'd like to re-run any steps of the classification for a separate set of simulated images (#1), measure predictor values from a separate sample of galaxies (#2), and/or rerun the classification on a different set or for different threshold values (#3).
 
