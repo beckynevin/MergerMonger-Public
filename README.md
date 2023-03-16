@@ -19,7 +19,7 @@ Let's dig in:
 
 The simulations are fully described in Nevin+2019.
 
-There are several variations of the same function within the MergerMonger.py code that load up the predictor tables from the simulated galaxies and run the LDA using various utilities in util_LDA.py. 
+There are several variations of the same function within the MergerMonger.py code (load_LDA*) that load up the predictor tables from the simulated galaxies and run the LDA. 
 They return three things: 
 1) The LDA results, which include information to standardize the predictors, the LDA coefficients, and the LD1 values of the simulated galaxies used as input, 
 2) The terms selected by the random forest, and
