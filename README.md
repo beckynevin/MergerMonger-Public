@@ -75,9 +75,9 @@ Other versions of the load_LDA_from_simulation function are:
 -load_LDA_from_simulation_changing_priors_changing_validation_set, which allows you to play around with the relative fraction of mergers in the validation set
 
 ## 2) Measure predictor values from images (GalaxySmelter):
-Within util_smelter.py, there are a number of utilities for creating massive tables of predictor values. I also include some utilities for visualizing individual galaxies and their predictor values like this:
+Within util_smelter.py, there are a number of utilities for creating massive tables of predictor values. I also include some utilities (lookup_galaxy_classify_and_diagnostic_plotting.py) for visualizing individual galaxies and their predictor values like this:
 
-<img src="images_for_github/prob_panel_low.png" alt="probability panel" width="700">
+<img src="images_for_github/diagnostic_plot_1237653589018018166_major_merger.png" alt="probability panel" width="700">
 
 The basic process involves first using util_SDSS.py to download SDSS frame images and then using util_smelter.py to measure imaging predictor values from these images. This process utilizes a combination of Source Extractor, Galfit, and statmorph to measure Gini, M20, Concentration, Asymmetry, Clumpiness, Sersic n, Shape Asymmetry, and average S/N value for SDSS r-band images that are downloaded using wget. Within util_smelter.py there are some tools for automatically downloading and then options for deleting SDSS frame images as you go, which is nice because these files are huge. 
 
