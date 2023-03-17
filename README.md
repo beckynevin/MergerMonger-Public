@@ -182,7 +182,11 @@ You must have this stuff installed and updated for everything to run smoothly:
 4) wget
 5) python packages
 
-Use the requirements.txt file to complete #5 - 
+Use conda and the requirements.txt file to complete #5 via setting up a conda environment - 
 ```
 conda create --name <env> --file requirements.txt
+```
+And then in order to run any of the code in this repo, activate your conda environment first:
+```
+conda activate <env>
 ```
