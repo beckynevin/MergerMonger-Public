@@ -173,13 +173,16 @@ I also include some utilities for interpreting these probability values using th
 
 
 
-## Dependencies
+## Installation guide
 
 You must have this stuff installed and updated for everything to run smoothly:
 1) Galfit (directions for installing Galfit and Source Extractor are provided in the imaging/ folder)
 2) Source Extractor
 3) Statmorph
 4) wget
-5) non-standard python stuff: astropy (vers), photutils, sklearn (vers), seaborn 
+5) python packages
 
-To do: Use poetry to make this way better.
+Use the requirements.txt file to complete #5 - 
+```
+conda create --name <env> --file requirements.txt
+```
