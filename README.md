@@ -151,7 +151,9 @@ Examples of running this for a list of SDSS IDs can be seen in analysis/lookup_g
 Also in util_smelter.py, I include utilities that I used on the supercomputer to run the full SDSS dataset in parallel. 
 
 ## 3) Classify galaxies and obtain merger probability values:
-The final step is to apply the LDA classification derived in step #1 to the predictor value tables generated in step #2 to obtain probability values. Here's a schematic of how this works:
+The final step is to apply the LDA classification derived in step #1 to the predictor value tables generated in step #2 to obtain LDA and the accompanying probability values for the different classifications. Don't worry, I've done this for you, and these tables are available on Zenodo (see the tables/ folder). This section gives an overview of how to re-derive LDA and probability values. 
+
+Here's a schematic of how this works:
 
 <img src="images_for_github/p_merg_recipe.png" alt="walkthrough" width="700">
 
@@ -169,7 +171,7 @@ LDA, p_merg, CDF = classify('../Tables/','../frames/',type_gal, run, LDA, RFR, d
 
 ```
 
-I also include some utilities for interpreting these probability values using the CDF of the full population. compare_pmerg_to_full_population_CDF.py does this by importing the saved LDA table and constructing an CDF from all of the p_merg values. This code can then be used to find the p_merg value that would correspond to some point on the CDF (i.e., when 10% of the full population has a higher p_merg value). It can also of course be used to find the CDF value for a given p_merg value to compare a given galaxy's probability to the full SDSS population.
+I also include some code for interpreting these probability values (analysis/lookup_galaxy_classify_and_diagnostic_plotting.py). This plots diagnostic images (see above) of individual galaxies with their predictor values, as well as their LD1 values, probability, and CDF values for a given LDA classification. This diagnostic plot also shows the three leading (most influential) LD1 terms alongside their contribution to LD1 (standardized predictor value * coefficient). This is described in the paper and is useful for interpreting <i>why</i> a given galaxy is classified a certain way. 
 
 
 
